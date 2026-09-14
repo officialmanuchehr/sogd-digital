@@ -16,7 +16,7 @@ export function Footer() {
       <div className="container-page grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <Image
-            src="/logo/sogd-logo-dark.svg"
+            src="/logo/sogd-logo-light.svg"
             alt="sogd.digital"
             width={117}
             height={32}
@@ -28,13 +28,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-medium text-paper">Навигация</h3>
+          <h3 className="label text-ink">Навигация</h3>
           <ul className="mt-4 flex flex-col gap-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-muted hover:text-paper transition-colors"
+                  className="text-sm text-muted hover:text-ink transition-colors"
                 >
                   {link.label}
                 </a>
@@ -44,13 +44,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-medium text-paper">Контакты</h3>
+          <h3 className="label text-ink">Контакты</h3>
           <ul className="mt-4 flex flex-col gap-3">
             {contactChannels.slice(0, 2).map((channel) => (
               <li key={channel.label}>
                 <a
                   href={channel.href}
-                  className="text-sm text-muted hover:text-paper transition-colors"
+                  className="text-sm text-muted hover:text-ink transition-colors"
                 >
                   {channel.value}
                 </a>
@@ -72,9 +72,9 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.label}
-              className="text-muted-2 hover:text-paper transition-colors"
+              className="text-muted-2 hover:text-ink transition-colors"
             >
-              <social.icon size={18} strokeWidth={1.75} />
+              <social.icon size={18} strokeWidth={1.5} />
             </a>
           ))}
         </div>

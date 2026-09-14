@@ -26,6 +26,9 @@ const initialState: FormState = {
   message: "",
 };
 
+const inputClasses =
+  "w-full border border-line bg-transparent px-4 py-3 text-ink placeholder:text-muted-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
+
 export function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
@@ -67,8 +70,8 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-line p-8">
-        <p className="text-paper">
+      <div className="border-t border-line pt-8">
+        <p className="text-ink">
           Спасибо! Мы свяжемся с вами в ближайшее время.
         </p>
       </div>
@@ -87,7 +90,7 @@ export function ContactForm() {
           value={form.name}
           onChange={(e) => update("name", e.target.value)}
           required
-          className="w-full rounded-xl border border-line bg-white/5 px-4 py-3 text-paper placeholder:text-muted-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo"
+          className={inputClasses}
           placeholder="Ваше имя"
         />
       </div>
@@ -102,7 +105,7 @@ export function ContactForm() {
           value={form.contact}
           onChange={(e) => update("contact", e.target.value)}
           required
-          className="w-full rounded-xl border border-line bg-white/5 px-4 py-3 text-paper placeholder:text-muted-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo"
+          className={inputClasses}
           placeholder="@username или +992 ..."
         />
       </div>
@@ -117,10 +120,10 @@ export function ContactForm() {
           onChange={(e) =>
             update("projectType", e.target.value as FormState["projectType"])
           }
-          className="w-full rounded-xl border border-line bg-white/5 px-4 py-3 text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo"
+          className={inputClasses}
         >
           {projectTypes.map((type) => (
-            <option key={type} value={type} className="bg-ink-2">
+            <option key={type} value={type} className="bg-paper text-ink">
               {type}
             </option>
           ))}
@@ -136,12 +139,12 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
           rows={4}
-          className="w-full resize-none rounded-xl border border-line bg-white/5 px-4 py-3 text-paper placeholder:text-muted-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo"
+          className={`resize-none ${inputClasses}`}
           placeholder="Расскажите коротко о задаче"
         />
       </div>
 
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {error && <p className="text-sm text-red-600">{error}</p>}
 
       <Button type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? "Отправляем..." : "Отправить заявку"}

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#0B1020",
+  themeColor: "#0A0A0A",
 };
 
 export default function RootLayout({
@@ -50,7 +50,7 @@ export default function RootLayout({
       lang="ru"
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ink text-paper">
+      <body className="min-h-full flex flex-col bg-paper text-ink">
         {children}
       </body>
     </html>

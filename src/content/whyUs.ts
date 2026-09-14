@@ -32,11 +32,10 @@ export const whyUsPoints: WhyUsPoint[] = [
 export type Stat = {
   value: string;
   label: string;
-  accent?: boolean;
 };
 
 export const stats: Stat[] = [
-  { value: "100%", label: "фокус на вебе", accent: true },
+  { value: "100%", label: "фокус на вебе" },
   { value: "от 7 дней", label: "до запуска лендинга" },
   { value: "24/7", label: "поддержка после запуска" },
 ];

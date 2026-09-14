@@ -6,7 +6,7 @@ export function TechStack() {
     <section id="tech" className="py-24 md:py-32">
       <div className="container-page">
         <FadeIn>
-          <h2 className="text-3xl font-semibold text-paper md:text-4xl">
+          <h2 className="text-3xl font-semibold text-ink md:text-4xl">
             Наш стек
           </h2>
           <p className="mt-4 max-w-xl text-muted">
@@ -19,7 +19,7 @@ export function TechStack() {
           {techStack.map((tech) => (
             <div
               key={tech.label}
-              className="flex items-center gap-3 rounded-full border border-line px-5 py-3 text-sm text-muted"
+              className="flex items-center gap-3 border border-line px-5 py-3 text-sm text-muted"
             >
               <tech.icon size={18} strokeWidth={1.75} aria-hidden />
               <span>{tech.label}</span>

@@ -7,15 +7,7 @@ import { navLinks } from "@/content/nav";
 import { LinkButton } from "@/components/ui/Button";
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (menuOpen) {
@@ -29,13 +21,7 @@ export function Header() {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-ink/80 backdrop-blur-md border-b border-line"
-          : "bg-transparent border-b border-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line-invert bg-ink">
       <div className="container-page flex h-16 items-center justify-between">
         <a href="#" className="flex items-center" aria-label="sogd.digital — на главную">
           <Image
@@ -53,16 +39,19 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted hover:text-paper transition-colors"
+              className="label text-paper/60 hover:text-paper transition-colors"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <LinkButton href="#contacts">Обсудить проект</LinkButton>
-        </div>
+        <a
+          href="#contacts"
+          className="label hidden text-paper/60 hover:text-paper transition-colors md:block"
+        >
+          Обсудить проект
+        </a>
 
         <button
           type="button"
@@ -76,7 +65,7 @@ export function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-ink border-t border-line">
+        <div className="md:hidden fixed inset-0 top-16 bg-ink border-t border-line-invert">
           <nav
             className="container-page flex flex-col gap-6 py-8"
             aria-label="Мобильная навигация"
@@ -93,6 +82,7 @@ export function Header() {
             ))}
             <LinkButton
               href="#contacts"
+              variant="outlineInvert"
               onClick={() => setMenuOpen(false)}
               className="mt-2 w-full"
             >
