@@ -67,9 +67,9 @@ export function Hero() {
           variants={item}
           className="mt-6 max-w-xl text-base text-muted md:text-lg"
         >
-          sogd.digital — веб-студия полного цикла по разработке сайтов.
-          Лендинги, корпоративные сайты, веб-приложения и интернет-магазины —
-          современно, быстро, под ключ.
+          sogd.digital — веб-студия полного цикла по разработке сайтов и
+          AI-автоматизации. Лендинги, корпоративные сайты, веб-приложения,
+          интернет-магазины и чат-боты — современно, быстро, под ключ.
         </motion.p>
 
         <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">

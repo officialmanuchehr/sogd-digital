@@ -15,7 +15,7 @@ export function Services() {
           </p>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 0.05}>
               <div className="h-full rounded-2xl border border-line p-8 transition-colors hover:border-white/20">

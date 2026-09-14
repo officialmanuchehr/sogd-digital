@@ -1,4 +1,4 @@
-import { Rocket, Building2, AppWindow, ShoppingBag, type LucideIcon } from "lucide-react";
+import { Rocket, Building2, AppWindow, ShoppingBag, Sparkles, type LucideIcon } from "lucide-react";
 
 export type Service = {
   icon: LucideIcon;
@@ -30,5 +30,11 @@ export const services: Service[] = [
     title: "Интернет-магазины",
     description:
       "Каталог, корзина, онлайн-оплата и удобная админка для управления.",
+  },
+  {
+    icon: Sparkles,
+    title: "AI-автоматизация",
+    description:
+      "Чат-боты, автоматизация заявок и рутинных процессов, AI для контента и поддержки клиентов. Меньше ручной работы — больше роста.",
   },
 ];
