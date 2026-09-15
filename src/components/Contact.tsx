@@ -1,4 +1,3 @@
-import { contactChannels } from "@/content/contacts";
 import { ContactForm } from "@/components/ContactForm";
 import { FadeIn } from "@/components/ui/FadeIn";
 
@@ -12,38 +11,9 @@ export function Contact() {
           </h2>
         </FadeIn>
 
-        <div className="mt-14 grid gap-12 md:grid-cols-2">
-          <FadeIn className="flex flex-col divide-y divide-line border-t border-line">
-            {contactChannels.map((channel) => (
-              <a
-                key={channel.label}
-                href={channel.href}
-                target={channel.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  channel.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className="flex items-center gap-4 py-5 transition-colors hover:bg-ink/[0.03]"
-              >
-                <channel.icon
-                  className="text-ink"
-                  size={22}
-                  strokeWidth={1.5}
-                  aria-hidden
-                />
-                <div>
-                  <div className="text-sm text-muted-2">{channel.label}</div>
-                  <div className="text-ink">{channel.value}</div>
-                </div>
-              </a>
-            ))}
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            <ContactForm />
-          </FadeIn>
-        </div>
+        <FadeIn delay={0.1} className="mt-14 max-w-xl">
+          <ContactForm />
+        </FadeIn>
       </div>
     </section>
   );
