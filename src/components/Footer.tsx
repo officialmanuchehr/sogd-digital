@@ -18,7 +18,7 @@ export function Footer() {
           <Image
             src="/logo/sogd-logo-light.svg"
             alt="sogd.digital"
-            width={117}
+            width={84}
             height={32}
             className="h-8 w-auto"
           />
