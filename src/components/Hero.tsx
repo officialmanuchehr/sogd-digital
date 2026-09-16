@@ -45,24 +45,22 @@ export function Hero() {
             variants={item}
             className="max-w-2xl text-3xl font-semibold text-paper sm:text-4xl md:text-5xl"
           >
-            Создаём сайты, которые работают на ваш бизнес
+            От Telegram-ботов до полномасштабных платформ
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mt-6 max-w-xl text-base text-paper/60 md:text-lg"
           >
-            sogd.digital — веб-студия полного цикла по разработке сайтов и
-            AI-автоматизации. Лендинги, корпоративные сайты, веб-приложения,
-            интернет-магазины и чат-боты — современно, быстро, под ключ.
+            Мы проектируем и создаем CRM-системы, биллинговые платформы, инструменты автоматизации и масштабируемые цифровые продукты — быстро, надежно и под ваш бизнес.
           </motion.p>
 
           <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
             <LinkButton href="#contacts" variant="inverted">
-              Обсудить проект
+              Начать проект
             </LinkButton>
             <LinkButton href="#services" variant="outlineInvert">
-              Смотреть услуги
+              Все услуги
             </LinkButton>
           </motion.div>
         </div>

@@ -7,7 +7,7 @@ export function WhyUs() {
       <div className="container-page">
         <FadeIn>
           <h2 className="text-3xl font-semibold text-ink md:text-4xl">
-            Почему нас выбирают
+            Почему Sogd Digital?
           </h2>
         </FadeIn>
 

@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
-import { AiServices } from "@/components/AiServices";
+import { Quote } from "@/components/Quote";
 import { WhyUs } from "@/components/WhyUs";
 import { Process } from "@/components/Process";
 import { CTA } from "@/components/CTA";
@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <AiServices />
+        <Quote />
         <WhyUs />
         <Process />
         <CTA />

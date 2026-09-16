@@ -6,9 +6,10 @@ export function Contact() {
     <section id="contacts" className="py-24 md:py-32">
       <div className="container-page">
         <FadeIn>
-          <h2 className="text-3xl font-semibold text-ink md:text-4xl">
-            Свяжитесь с нами
-          </h2>
+          <p className="max-w-xl text-muted">
+            Опишите задачу — ответим в течение дня и предложим решение, а не
+            шаблон.
+          </p>
         </FadeIn>
 
         <FadeIn delay={0.1} className="mt-14 max-w-xl">

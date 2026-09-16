@@ -7,11 +7,10 @@ export function Services() {
       <div className="container-page">
         <FadeIn>
           <h2 className="text-3xl font-semibold text-ink md:text-4xl">
-            Что мы делаем
+            Мы создаем все, что нужно вашему бизнесу — от простых инструментов до сложных платформ
           </h2>
           <p className="mt-4 max-w-xl text-muted">
-            Фокусируемся только на разработке сайтов — поэтому делаем их
-            глубже и качественнее.
+            От лендинга до интернет-магазина — весь цикл в одной команде.
           </p>
         </FadeIn>
 
