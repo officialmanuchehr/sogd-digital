@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Send, Camera, MessageCircle } from "lucide-react";
 import { navLinks } from "@/content/nav";
-import { contactChannels } from "@/content/contacts";
 
 // TODO: swap for real brand icons if a brand icon set is added later
 const socialLinks = [
@@ -13,7 +12,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-line py-16">
-      <div className="container-page grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
+      <div className="container-page grid gap-12 md:grid-cols-[1.5fr_1fr]">
         <div>
           <Image
             src="/logo/sogd-logo-light.svg"
@@ -37,22 +36,6 @@ export function Footer() {
                   className="text-sm text-muted hover:text-ink transition-colors"
                 >
                   {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="label text-ink">Контакты</h3>
-          <ul className="mt-4 flex flex-col gap-3">
-            {contactChannels.slice(0, 2).map((channel) => (
-              <li key={channel.label}>
-                <a
-                  href={channel.href}
-                  className="text-sm text-muted hover:text-ink transition-colors"
-                >
-                  {channel.value}
                 </a>
               </li>
             ))}
